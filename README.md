@@ -6,8 +6,10 @@
 
 - [Flutter SDK](https://docs.flutter.dev/get-started/install)
 
-    Tam
 
+A aplicação está disponível para Android, Linux, Web e Windows, tendo sido utilizada a versão 33 do Android para os testes.
 
-    Depois, clone este repositório e utilize o comando FLutter Run no diretório do projeto para rodar a aplicação.
+## Rodando a aplicação
+
+    Clone este repositório e utilize o comando FLutter Run no diretório do projeto para rodar a aplicação.
 
