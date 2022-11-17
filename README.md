@@ -1,16 +1,13 @@
-# pitmed_app
-
-A new Flutter project.
+# PITmed - aplicação D003-SW
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+    Para utilizar este projeto, primeiro é necessário obter a SDK do Flutter, disponível aqui:
 
-A few resources to get you started if this is your first Flutter project:
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    Tam
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+    Depois, clone este repositório e utilize o comando FLutter Run no diretório do projeto para rodar a aplicação.
+
