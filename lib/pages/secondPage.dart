@@ -4,6 +4,7 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:pitmed_app/impl/ExpandableK.dart';
 import 'package:pitmed_app/impl/Sistema.dart';
+import 'package:pitmed_app/models/my_card.dart';
 
 class SecondPage extends StatefulWidget {
   final value;
@@ -17,8 +18,14 @@ class _SecondPageState extends State<SecondPage> {
   ExpandableK expandable = ExpandableK();
   @override
   initState() {
-    expandable.adicionarSistema(Sistema('title', 'text', 'path', 'Endócrino'));
+    expandable.adicionarSistema(Sistema('title', '', 'path', 'Endócrino'));
+    expandable.adicionarSistema(Sistema('asd', '', 'sddddd', 'Digestório'));
     expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
+    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
+    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
+    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
+    expandable
+        .adicionarSistema(Sistema('asd', 'ffffff', 'sddddd', 'Digestório'));
     super.initState();
   }
 
@@ -43,28 +50,19 @@ class _SecondPageState extends State<SecondPage> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   child: Center(
-                    child: SizedBox(
+                    child: Container(
                       height: 500,
-                      width: 500,
+                      width: MediaQuery.of(context).size.width - 20,
                       child: ListView.builder(
                           itemCount: expandable.sistemas.length,
                           itemBuilder: (BuildContext ctxt, int index) {
                             if (expandable.sistemas[index].codigo ==
                                 widget.value) {
-                              return ExpandablePanel(
-                                header: Text(expandable.sistemas[index].title
-                                    .toString()),
-                                collapsed: Text(
-                                  expandable.sistemas[index].text.toString(),
-                                  softWrap: true,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                expanded: Text(
-                                  expandable.sistemas[index].text.toString(),
-                                  softWrap: true,
-                                ),
-                              );
+                              return MyCard(
+                                  title:
+                                      '  ${expandable.sistemas[index].title}',
+                                  text: '  ${expandable.sistemas[index].text}',
+                                  path: expandable.sistemas[index].path);
                             }
                             return const SizedBox();
                           }),
@@ -75,3 +73,19 @@ class _SecondPageState extends State<SecondPage> {
         ));
   }
 }
+
+
+/* ExpandablePanel(
+                                      header: Text(
+                                          '  ${expandable.sistemas[index].title}'),
+                                      collapsed: Text(
+                                        '  ${expandable.sistemas[index].text}',
+                                        softWrap: true,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      expanded: Text(
+                                        '  ${expandable.sistemas[index].text}',
+                                        softWrap: true,
+                                      ),
+                                    ),*/

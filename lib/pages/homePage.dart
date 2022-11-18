@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:pitmed_app/secondPage.dart';
+import 'package:pitmed_app/pages/secondPage.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -30,13 +30,13 @@ class _HomePageState extends State<HomePage> {
         width: double.infinity,
         color: const Color(0xff25142d),
         child: Center(
-          child: Container(
-            height: 500,
+          child: SizedBox(
+            height: 400,
             width: 300,
             child: Stack(
               children: [
                 Container(
-                  height: 500,
+                  height: 420,
                   width: 300,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -64,12 +64,12 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       child: Center(
                           child: Text(
-                        'Selecione uma opção e aperte Pŕoximo',
+                        'Selecione uma opção e aperte Pŕoximo:',
                         style: TextStyle(fontSize: 14, color: Colors.white),
                       )),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     DropdownButtonHideUnderline(
                       child: DropdownButton2(
@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                         buttonPadding:
                             const EdgeInsets.only(left: 14, right: 14),
                         buttonDecoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
+                          borderRadius: BorderRadius.circular(6),
                           border: Border.all(
                             color: Colors.black26,
                           ),
@@ -150,20 +150,23 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 100,
+                      height: 20,
                     ),
-                    ElevatedButton.icon(
-                      style: ButtonStyle(
-                          foregroundColor:
-                              MaterialStateProperty.all<Color>(Colors.yellow),
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              Colors.redAccent)),
-                      icon: const Icon(Icons.arrow_right),
-                      label: const Text('Próximo'),
-                      onPressed: () {
-                        _navigateToNextScreen(context);
-                        log(selectedValue.toString());
-                      },
+                    SizedBox(
+                      width: 140,
+                      child: ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                            shadowColor: Colors.black,
+                            elevation: 2,
+                            foregroundColor: Colors.yellow,
+                            backgroundColor: Colors.redAccent),
+                        icon: const Icon(Icons.arrow_right),
+                        label: const Text('Próximo'),
+                        onPressed: () {
+                          _navigateToNextScreen(context);
+                          log(selectedValue.toString());
+                        },
+                      ),
                     )
                   ],
                 )
