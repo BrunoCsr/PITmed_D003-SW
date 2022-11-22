@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
-import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:pitmed_app/impl/ExpandableK.dart';
 import 'package:pitmed_app/impl/Sistema.dart';
+import 'package:pitmed_app/impl/texts/Textos.dart';
 import 'package:pitmed_app/models/my_card.dart';
 
 class SecondPage extends StatefulWidget {
@@ -18,14 +18,22 @@ class _SecondPageState extends State<SecondPage> {
   ExpandableK expandable = ExpandableK();
   @override
   initState() {
-    expandable.adicionarSistema(Sistema('title', '', 'path', 'Endócrino'));
-    expandable.adicionarSistema(Sistema('asd', '', 'sddddd', 'Digestório'));
-    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
-    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
-    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
-    expandable.adicionarSistema(Sistema('asd', 'ffff', 'sddddd', 'Digestório'));
-    expandable
-        .adicionarSistema(Sistema('asd', 'ffffff', 'sddddd', 'Digestório'));
+    Textos textos = Textos();
+
+    expandable.adicionarSistema(Sistema(
+        'Intolerância à lactose',
+        textos.intoleranciaALactose,
+        'assets/sistemas/digestorio/intolerancia a lactose/intolerancia_a_lactose.jpg',
+        'Digestório'));
+
+    expandable.adicionarSistema(Sistema('Diabetes', textos.diabetes,
+        'assets/sistemas/endocrino/diabetes/Diabetes.png', 'Endócrino'));
+    expandable.adicionarSistema(Sistema(
+        'Pedra na vesícula',
+        textos.pedraNaVesicula,
+        'assets/sistemas/digestorio/pedra na vesicula/pedra na vesicula.jpg',
+        'Digestório'));
+
     super.initState();
   }
 
@@ -64,6 +72,7 @@ class _SecondPageState extends State<SecondPage> {
                                   text: '  ${expandable.sistemas[index].text}',
                                   path: expandable.sistemas[index].path);
                             }
+
                             return const SizedBox();
                           }),
                     ),

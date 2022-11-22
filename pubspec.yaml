@@ -66,6 +66,9 @@ flutter:
   - assets/brand1.png
   - assets/brandlogo (1).jpeg
   - assets/brandlogo.jpeg
+  - assets/sistemas/digestorio/intolerancia a lactose/intolerancia_a_lactose.jpg
+  - assets/sistemas/endocrino/diabetes/Diabetes.png
+  - assets/sistemas/digestorio/pedra na vesicula/pedra na vesicula.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

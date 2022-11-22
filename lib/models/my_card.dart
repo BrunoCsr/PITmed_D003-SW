@@ -15,36 +15,60 @@ class MyCard extends StatefulWidget {
 class _MyCardState extends State<MyCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 250,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-          color: Colors.blue,
-          border: Border.all(width: 2, color: Colors.black)),
+    return Flexible(
       child: Column(
         children: [
           Container(
-            height: 170,
-            width: double.infinity,
-            color: Colors.yellow,
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          ExpandablePanel(
-            header: Text(widget.title),
-            collapsed: Text(
-              widget.text,
-              softWrap: true,
-              maxLines: 2,
-              overflow: TextOverflow.fade,
+            height: 250,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: Colors.redAccent,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(width: 2, color: Colors.redAccent)),
+            child: Column(
+              children: [
+                Flexible(
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10))),
+                        height: 170,
+                        width: double.infinity,
+                        child: Image(
+                          image: AssetImage(widget.path),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                ExpandablePanel(
+                  header: Text(widget.title),
+                  collapsed: Text(
+                    widget.text,
+                    softWrap: true,
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
+                  expanded: Text(
+                    widget.text,
+                    overflow: TextOverflow.fade,
+                    softWrap: true,
+                    maxLines: 10,
+                  ),
+                ),
+              ],
             ),
-            expanded: Text(
-              widget.text,
-              overflow: TextOverflow.fade,
-              softWrap: true,
-            ),
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
