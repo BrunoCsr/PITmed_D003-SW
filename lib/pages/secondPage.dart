@@ -73,7 +73,7 @@ class _SecondPageState extends State<SecondPage> {
                   width: MediaQuery.of(context).size.width,
                   child: Center(
                     child: Container(
-                      height: 500,
+                      height: 650,
                       width: MediaQuery.of(context).size.width - 20,
                       child: ListView.builder(
                           itemCount: expandable.sistemas.length,
