@@ -164,8 +164,9 @@ class _HomePageState extends State<HomePage> {
                         label: const Text('Próximo'),
                         onPressed: () {
                           if (selectedValue == null) {
-                          } else
+                          } else {
                             _navigateToNextScreen(context);
+                          }
                           log(selectedValue.toString());
                         },
                       ),

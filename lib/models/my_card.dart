@@ -60,7 +60,7 @@ class _MyCardState extends State<MyCard> {
                     widget.text,
                     overflow: TextOverflow.fade,
                     softWrap: true,
-                    maxLines: 10,
+                    maxLines: 11,
                   ),
                 ),
               ],
