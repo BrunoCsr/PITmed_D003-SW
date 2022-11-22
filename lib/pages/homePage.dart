@@ -158,12 +158,14 @@ class _HomePageState extends State<HomePage> {
                         style: ElevatedButton.styleFrom(
                             shadowColor: Colors.black,
                             elevation: 2,
-                            foregroundColor: Colors.yellow,
+                            //foregroundColor: Colors.yellow,
                             backgroundColor: Colors.redAccent),
                         icon: const Icon(Icons.arrow_right),
                         label: const Text('Próximo'),
                         onPressed: () {
-                          _navigateToNextScreen(context);
+                          if (selectedValue == null) {
+                          } else
+                            _navigateToNextScreen(context);
                           log(selectedValue.toString());
                         },
                       ),
