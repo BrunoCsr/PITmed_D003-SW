@@ -13,7 +13,7 @@ Para utilizar este projeto, primeiro é necessário obter a SDK do Flutter, disp
 A aplicação está disponível para Android, Linux, Web e Windows, tendo sido utilizada a versão 33 do Android para os testes.
 
 ## Rodando a aplicação
-Clone este repositório e utilize o comando FLutter Run no diretório do projeto para rodar a aplicação.
+Clone este repositório e utilize o comando flutter run no diretório do projeto para rodar a aplicação.
 
 ## Como utilizar
 
