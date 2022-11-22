@@ -25,16 +25,13 @@ class _SecondPageState extends State<SecondPage> {
         textos.intoleranciaALactose,
         'assets/sistemas/digestorio/intolerancia a lactose/intolerancia_a_lactose.jpg',
         'Digestório'));
-
     expandable.adicionarSistema(Sistema(
         'Pedra na vesícula',
         textos.pedraNaVesicula,
         'assets/sistemas/digestorio/pedra na vesicula/pedra na vesicula.jpg',
         'Digestório'));
-
     expandable.adicionarSistema(Sistema('Refluxo', textos.refluxo,
         'assets/sistemas/digestorio/refluxo/refluxo.jpeg', 'Digestório'));
-
     expandable.adicionarSistema(Sistema('Diabetes', textos.diabetes,
         'assets/sistemas/endocrino/diabetes/Diabetes.png', 'Endócrino'));
     expandable.adicionarSistema(Sistema(
@@ -42,7 +39,6 @@ class _SecondPageState extends State<SecondPage> {
         textos.hipertireoidismo,
         'assets/sistemas/endocrino/hipertireoidismo/hipertireoidismo.jpg',
         'Endócrino'));
-
     expandable.adicionarSistema(Sistema(
         'Dislipidemia',
         textos.dislipidemia,
@@ -72,7 +68,7 @@ class _SecondPageState extends State<SecondPage> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   child: Center(
-                    child: Container(
+                    child: SizedBox(
                       height: 650,
                       width: MediaQuery.of(context).size.width - 20,
                       child: ListView.builder(
@@ -96,19 +92,3 @@ class _SecondPageState extends State<SecondPage> {
         ));
   }
 }
-
-
-/* ExpandablePanel(
-                                      header: Text(
-                                          '  ${expandable.sistemas[index].title}'),
-                                      collapsed: Text(
-                                        '  ${expandable.sistemas[index].text}',
-                                        softWrap: true,
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      expanded: Text(
-                                        '  ${expandable.sistemas[index].text}',
-                                        softWrap: true,
-                                      ),
-                                    ),*/
