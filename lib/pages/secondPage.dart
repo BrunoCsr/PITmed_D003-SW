@@ -8,7 +8,7 @@ import 'package:pitmed_app/models/my_card.dart';
 
 class SecondPage extends StatefulWidget {
   final value;
-  const SecondPage({super.key, required this.value});
+  const SecondPage({super.key, required this.value, required});
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -53,7 +53,7 @@ class _SecondPageState extends State<SecondPage> {
         appBar: AppBar(
           backgroundColor: const Color(0xff7b4397),
           centerTitle: true,
-          title: const Text('D003 - SW'),
+          title: Text(widget.value),
         ),
         body: Container(
           height: double.infinity,

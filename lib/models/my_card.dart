@@ -49,7 +49,10 @@ class _MyCardState extends State<MyCard> {
                   height: 8,
                 ),
                 ExpandablePanel(
-                  header: Text(widget.title),
+                  header: Text(
+                    widget.title,
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
                   collapsed: Text(
                     widget.text,
                     softWrap: true,
@@ -62,6 +65,12 @@ class _MyCardState extends State<MyCard> {
                     softWrap: true,
                     maxLines: 11,
                   ),
+                  theme: const ExpandableThemeData(
+                    tapBodyToExpand: true,
+                    tapBodyToCollapse: true,
+                    iconColor: Colors.yellow,
+                  ),
+                  controller: ExpandableController(initialExpanded: false),
                 ),
               ],
             ),
